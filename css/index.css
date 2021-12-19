@@ -1,0 +1,246 @@
+{
+    font-family: 'Open Sans', sans-serif; 
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.hero-overlay {
+    height: 95vh;
+    background-image: url("../images/hero_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-container {
+    height: 95vh;
+    background: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-text > h1 {font-size: 56px;}
+    .hero-text > p {font-size: 36px;}
+    
+}
+
+h1 {
+    padding: 100px 15px 15px 15px;
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+}
+
+.founder-container, .technology-partner-container,
+.logistics-partner-container, .about-container,
+.associated-companies-container, .footer-block-group{
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founder-details-block, .founder-img-block, .technology-partner-details-block, .technology-partner-img-block,
+.logistics-partner-details-block, .logistics-partner-img-block{
+    width: 50%;
+    padding: 100px 15px 15px 15px;
+}
+
+.founder-details-block, .founder-img-block{
+    width: 50%;
+    padding: 15px;
+}
+
+.founder-img-block > img, .logistics-partner-img-block > img {
+    width: 100%;
+    transition: transform .5s, transform .5s;
+}
+
+.technology-partner-img-block > img {
+    width: 100%;
+    transition: transform .5s, transform .5s;
+}
+
+.founder-img-block > img:hover, .logistics-partner-img-block > img:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.technology-partner-img-block > img:hover {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+.about-block {
+    font-family: 'Open Sans', sans-serif;
+    width: 33.33%;
+    padding: 100px 15px 15px 15px;
+    transition: background-color 1s, color 1s;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-block:hover {
+    background-color: rgb(0, 234, 117);
+    color: #ffffff;
+}
+
+.associated-companies-container {
+    background-image: url("../images/laptop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.associated-companies-logo {
+    width: 150px;
+}
+
+.associated-companies-group-1, .associated-companies-group-2 {
+    width: 50%;
+    padding: 15px;
+}
+
+.associated-companies-group-2 {
+    text-align: right;
+}
+
+ul {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 0;
+    display: inline;
+}
+
+.associated-companies-container-block {
+    padding-top: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+    .associated-companies-container-block {min-height: 215px}
+}
+
+
+.team-capabilities-container {
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.numbers-highlight, .units-highlight {
+    color: rgb(48, 179, 66);
+}
+
+@media only screen and (min-width: 768px){
+  .numbers-highlight {font-weight: bold; font-size: 36px;}  
+}
+
+@media only screen and (min-width: 768px){
+  .units-highlight {font-weight: bold; font-size: 36px;}  
+}
+
+.team-capabilities-right-section {
+    width: 50%;
+}
+
+.team-capabilities-left-section {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    width: 50%;
+}
+
+.team-capabilities-left-section > p:nth-child(odd){
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.team-capabilities-block-group-1,
+.team-capabilities-block-group-2,
+.team-capabilities-block-group-3 {
+    display: flex;
+    justify-content: center;
+} 
+
+.team-capabilities-block {
+    width: 25.33%;
+    padding: 15px;
+}
+
+.team-capabilities-icon {
+    width: 50%;
+}
+
+.footer {
+    background-image: url("../images/hero_image.jpg");
+}
+
+.footer-container {
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.footer-block-group {
+    padding: 70px 0 50px 0;
+}
+
+.footer-block{
+    color: #ffffff;
+    width: 25%;
+    padding: 15px;
+}
+
+.footer-block > p {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
