@@ -4,32 +4,49 @@
 
 .navbar {
     background-color: #ffffff;
+    padding:  0rem 1rem !important;
 }
 
-.hero-overlay {
-    height: 95vh;
+#navbar_hero_overlay_combined {
     background-image: url("../images/hero_image.jpg");
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.navbar_hero_overlay_combined_container {
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.5);
+}
+
 .hero-container {
-    height: 95vh;
     background: rgb(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero-text {
+.hero-overlay {
+    padding-top: 100px; 
+}
+.hero-section-header {
     text-align: center;
     font-family: 'Montserrat';
     color: #ffffff;
 }
 
+#hero-section-text {
+    max-width: 1140px;
+    margin: auto;
+    color: rgb(220, 220, 220);
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
-    .hero-text > h1 {font-size: 56px;}
-    .hero-text > p {font-size: 36px;}
+    .hero-section-header > h1 {font-size: 56px;}
+    .hero-section-header > p {font-size: 36px;}
     
 }
 
@@ -41,18 +58,102 @@ h1 {
 
 .founder-container, .technology-partner-container,
 .logistics-partner-container, .about-container,
-.associated-companies-container, .footer-block-group{
+.associated-companies-container, .team-capabilities-container, 
+.footer-block-group{
     max-width: 1140px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
 }
 
+.associated-companies-container > h1 {
+    padding: 70px 15px 15px 15px !important;
+}
+
+@media (max-width: 768px) {
+    .founder-container, .technology-partner-container,
+    .logistics-partner-container, .about-container, 
+    .team-capabilities-container,
+    .footer-block-group{
+        max-width: 1140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .founder-img-block {
+        order: 1;
+    }
+
+    .founder-details-block {
+        order: 2;
+    }
+
+    .technology-partner-img-block {
+        order: 1;
+    }
+
+    .technology-partner-details-block {
+        order: 2;
+    }
+
+    .logistics-partner-img-block {
+        order: 1;
+    }
+
+    .logistics-partner-details-block {
+        order: 2;
+    }
+}
+
+@media (min-width: 769px) {
+    .founder-img-block {
+        order: 1;
+    }
+
+    .founder-details-block {
+        order: 2;
+    }
+
+    .technology-partner-img-block {
+        order: 2;
+    }
+
+    .technology-partner-details-block {
+        order: 1;
+    }
+
+    .logistics-partner-img-block {
+        order: 1;
+    }
+
+    .logistics-partner-details-block {
+        order: 2;
+    }
+}
+
 .founder-details-block, .founder-img-block, .technology-partner-details-block, .technology-partner-img-block,
-.logistics-partner-details-block, .logistics-partner-img-block{
+.logistics-partner-details-block, .logistics-partner-img-block {
     width: 50%;
     padding: 100px 15px 15px 15px;
+}
+
+@media (max-width: 768px) {
+    .founder-details-block, .founder-img-block, .technology-partner-details-block, .technology-partner-img-block,
+    .logistics-partner-details-block, .logistics-partner-img-block {
+        width: 100% !important;
+        padding: 15px 15px 15px 15px;
+    } 
+}
+
+.founder-img-block, .technology-partner-img-block, .logistics-partner-img-block {
+    order: 1;
 }
 
 .founder-details-block, .founder-img-block{
@@ -85,6 +186,15 @@ h1 {
     transition: background-color 1s, color 1s;
 }
 
+@media (max-width: 768px) {
+    .about-block {
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
+        padding: 50px 15px 15px 15px;
+        transition: background-color 1s, color 1s;
+    }
+}
+
 .about-img {
     width: 100%;
     border-radius: 50%;
@@ -98,13 +208,30 @@ h1 {
 }
 
 .associated-companies-container {
+    position: relative;
     background-image: url("../images/laptop.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.associated-companies-container > p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media (min-width: 769px) {
+    .associated-companies-container > p { font-size: 36px;}
+}
+
+@media (max-width: 768px) {
+    .associated-companies-container > p { font-size: 16px;}
+}
+
 .associated-companies-logo {
     width: 150px;
+    min-height: 0px;
 }
 
 .associated-companies-group-1, .associated-companies-group-2 {
@@ -125,20 +252,14 @@ ul {
 
 .associated-companies-container-block {
     padding-top: 25px;
-}
-
-@media only screen and (min-width: 768px) {
-    .associated-companies-container-block {min-height: 215px}
+    min-height: 320px;
 }
 
 
-.team-capabilities-container {
-    width: 1140px;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+@media (max-width: 768px) {
+    .associated-companies-container {
+        background-image: url();
+    }
 }
 
 .numbers-highlight, .units-highlight {
@@ -153,6 +274,22 @@ ul {
   .units-highlight {font-weight: bold; font-size: 36px;}  
 }
 
+.team-capabilities-container {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+   .team-capabilities-right-section {
+        width: 100% !important;
+    }
+    .team-capabilities-left-section {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: left;
+        width: 100% !important;
+    }
+}
+
 .team-capabilities-right-section {
     width: 50%;
 }
@@ -161,6 +298,7 @@ ul {
     margin-top: auto;
     margin-bottom: auto;
     text-align: left;
+    padding: 15px;
     width: 50%;
 }
 
@@ -181,12 +319,23 @@ ul {
     padding: 15px;
 }
 
+@media (max-width: 768px) {
+    .team-capabilities-block {width: 33.33%;}
+}
+
+@media (max-width: 778px) {
+    width: 100%;
+    padding: 15px;
+}
+
 .team-capabilities-icon {
     width: 50%;
 }
 
 .footer {
     background-image: url("../images/hero_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer-container {
@@ -205,6 +354,16 @@ ul {
 
 .footer-block > p {
     padding-top: 15px;
+}
+
+@media (max-width: 778px) {
+    .footer-block {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-block-group {
+        padding: 25px;
+    }
 }
 
 
